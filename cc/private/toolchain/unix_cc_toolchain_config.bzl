@@ -648,21 +648,6 @@ def _impl(ctx):
         provides = ["profile"],
     )
 
-    strip_debug_symbols_feature = feature(
-        name = "strip_debug_symbols",
-        flag_sets = [
-            flag_set(
-                actions = all_link_actions + lto_index_actions,
-                flag_groups = [
-                    flag_group(
-                        flags = ["-Wl,-S"],
-                        expand_if_available = "strip_debug_symbols",
-                    ),
-                ],
-            ),
-        ],
-    )
-
     build_interface_libraries_feature = feature(
         name = "build_interface_libraries",
         flag_sets = [
