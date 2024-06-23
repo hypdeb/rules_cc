@@ -1110,7 +1110,6 @@ def _impl(ctx):
             archiver_flags_feature,
             force_pic_flags_feature,
             fission_support_feature,
-            strip_debug_symbols_feature,
             coverage_feature,
             supports_pic_feature,
             gcc_coverage_map_format_feature,
